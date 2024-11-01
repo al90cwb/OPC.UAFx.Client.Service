@@ -50,12 +50,12 @@ Este projeto usa as seguintes bibliotecas e pacotes:
     ```bash
     dotnet ef migrations add InitialCreate
 
-    Depois, aplique a migração para criar o banco de dados:
+   Depois, aplique a migração para criar o banco de dados:
 
     ```bash
     dotnet ef database update
 
-Isso criará o arquivo MaquinaOee.db no diretório raiz do projeto.
+   Isso criará o arquivo MaquinaOee.db no diretório raiz do projeto.
 
 3. **Execução**
     Para iniciar o serviço, execute dentro da pasta da aplicação:
@@ -63,7 +63,7 @@ Isso criará o arquivo MaquinaOee.db no diretório raiz do projeto.
     ```bash
     dotnet run
 
-    O serviço iniciará, conectará ao servidor OPC configurado, coletará os dados e os armazenará no banco de dados SQLite a cada minuto.
+   O serviço iniciará, conectará ao servidor OPC configurado, coletará os dados e os armazenará no banco de dados SQLite a cada minuto.
 
 4. **Visualização dos dados**
 
@@ -80,9 +80,20 @@ Isso criará o arquivo MaquinaOee.db no diretório raiz do projeto.
     │   └── MaquinaOeeClient.cs         # Cliente OPC para coleta e armazenamento de dados
     ├── Worker.cs                       # Serviço de fundo que coleta os dados periodicamente
     ├── Program.cs                      # Ponto de entrada da aplicação
-    └── OPC.UAFx.Client.Service.csproj  # Arquivo de projeto
+    ├── OPC.UAFx.Client.Service.csproj  # Arquivo de projeto
+    ├── ClpProgram                      # BAckup CLP Simulador
+    └── opcUaConfig                     # Arquivo de Configuração OPCUA Monitoramento
 
-    Certifique-se de que o endereço OPC configurado na classe MaquinaOeeClient esteja correto para o servidor OPC desejado. Para adicionar ou modificar os dados a serem coletados, ajuste os nós OPC nas leituras da classe MaquinaOeeClient.
+ Certifique-se de que o endereço OPC configurado na classe MaquinaOeeClient esteja correto para o servidor OPC desejado. Para adicionar ou modificar os dados a serem coletados, ajuste os nós OPC nas leituras da classe MaquinaOeeClient.
 
 6. **Licença**
 Este projeto está licenciado sob os termos da MIT License. Consulte o arquivo LICENSE para mais detalhes.
+
+7. **Programa do CLP**
+Utilizei o CLP modelo TM241CEC24T, é necessario fazer a instalação do Software Machine Expert 2.2:
+
+[Machine Expert]https://www.se.com/br/pt/product-range/2226-ecostruxure-machine-expert/
+[TM241CEC40T]https://www.se.com/br/pt/product/TM241CE24T/controlador-l%C3%B3gico-program%C3%A1vel-14-entradas-10-sa%C3%ADdas-digitais-sa%C3%ADdas-source-pnp-modbus-tcp-ethernet-ip-opc-ua-24-vdc-tm241ce24t/
+
+
+
