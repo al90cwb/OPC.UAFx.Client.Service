@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OPC.UAFx.Client.Service", "OPC.UAFx.Client.Service.csproj", "{AC7A60A1-BF1E-4788-85B0-0C08A81C2CE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC7A60A1-BF1E-4788-85B0-0C08A81C2CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC7A60A1-BF1E-4788-85B0-0C08A81C2CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC7A60A1-BF1E-4788-85B0-0C08A81C2CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC7A60A1-BF1E-4788-85B0-0C08A81C2CE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52051057-84E4-4DA9-8F27-43A598A4303E}
+	EndGlobalSection
+EndGlobal
