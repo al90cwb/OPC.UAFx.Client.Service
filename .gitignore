@@ -396,3 +396,11 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Ignorar banco de dados SQLite e seus arquivos auxiliares
+*.db
+*.db-shm
+*.db-wal
+
+# Ignorar diretório de migrations
+Migrations/
