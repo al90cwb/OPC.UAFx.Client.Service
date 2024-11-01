@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.14.0</Version>
+    <SymbolConfigObject version="4.5.0.0" runtimeid="3.5.19.40" libversion="4.5.0.0" compiler="3.5.19.40" lmm="3.5.19.40" profile="V22.1.1.0" settings="LayoutCalculator=OptimizedClientSideLayoutCalculator" />
+    <ProjectInfo name="OPC_Packform" devicename="Machine" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeUserDef name="T_CANbus" size="0" nativesize="128" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="CANbus" />
+    <TypeUserDef name="T_PLCSystemFB" size="0" nativesize="8" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="PLCSystemFB" />
+    <TypeUserDef name="T_RelocationTableFB" size="0" nativesize="4" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="RelocationTableFB" />
+    <TypeSimple name="T_BYTE" size="1" swapsize="1" typeclass="Byte" iecname="BYTE" />
+    <TypeSimple name="T_DINT" size="4" swapsize="4" typeclass="DInt" iecname="DINT" />
+    <TypeSimple name="T_DWORD" size="4" swapsize="4" typeclass="DWord" iecname="DWORD" />
+    <TypeSimple name="T_UINT" size="2" swapsize="2" typeclass="UInt" iecname="UINT" />
+    <TypeSimple name="T_WORD" size="2" swapsize="2" typeclass="Word" iecname="WORD" />
+    <TypeSimple name="T_POINTER_TO_BYTE" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO BYTE" />
+    <TypeSimple name="T_POINTER_TO_IoConfigChannelMap" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO IoConfigChannelMap" />
+    <TypeSimple name="T_POINTER_TO_IoConfigConnector" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO IoConfigConnector" />
+    <TypeSimple name="T_POINTER_TO_IoConfigConnectorMap" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO IoConfigConnectorMap" />
+    <TypeSimple name="T_POINTER_TO_IoConfigParameter" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO IoConfigParameter" />
+    <TypeSimple name="T_POINTER_TO_IoConfigTaskMap" size="4" swapsize="4" typeclass="Pointer" iecname="POINTER TO IoConfigTaskMap" />
+    <TypeUserDef name="T_VERSION" size="8" nativesize="8" typeclass="Userdef" pouclass="STRUCTURE" iecname="VERSION">
+      <UserDefElement iecname="uiMajor" type="T_UINT" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiMinor" type="T_UINT" byteoffset="2" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiServicePack" type="T_UINT" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiPatch" type="T_UINT" byteoffset="6" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeSimple name="T_XWORD" size="4" swapsize="4" typeclass="DWord" iecname="XWORD" aliasedtype="T_DWORD" aliasediecname="DWORD" />
+    <TypeUserDef name="T_IoConfigChannelMap" size="20" nativesize="20" typeclass="Userdef" pouclass="STRUCTURE" iecname="IoConfigChannelMap">
+      <UserDefElement iecname="pParameter" type="T_POINTER_TO_IoConfigParameter" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="pbyIecAddress" type="T_POINTER_TO_BYTE" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="wParameterBitOffset" type="T_WORD" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="wIecAddressBitOffset" type="T_WORD" byteoffset="10" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="wSize" type="T_WORD" byteoffset="12" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="wDummy" type="T_WORD" byteoffset="14" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="dwDriverSpecific" type="T_XWORD" byteoffset="16" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_IoConfigConnectorMap" size="16" nativesize="16" typeclass="Userdef" pouclass="STRUCTURE" iecname="IoConfigConnectorMap">
+      <UserDefElement iecname="pConnector" type="T_POINTER_TO_IoConfigConnector" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="dwIoMgrSpecific" type="T_XWORD" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="dwNumOfChannels" type="T_DWORD" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="pChannelMapList" type="T_POINTER_TO_IoConfigChannelMap" byteoffset="12" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_IoConfigParameter" size="20" nativesize="20" typeclass="Userdef" pouclass="STRUCTURE" iecname="IoConfigParameter">
+      <UserDefElement iecname="dwParameterId" type="T_DWORD" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="dwValue" type="T_XWORD" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="wType" type="T_WORD" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="wLen" type="T_WORD" byteoffset="10" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="dwFlags" type="T_DWORD" byteoffset="12" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="dwDriverSpecific" type="T_XWORD" byteoffset="16" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_IoConfigTaskMap" size="12" nativesize="12" typeclass="Userdef" pouclass="STRUCTURE" iecname="IoConfigTaskMap">
+      <UserDefElement iecname="dwTaskId" type="T_DWORD" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="wType" type="T_WORD" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="wNumOfConnectorMap" type="T_WORD" byteoffset="6" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="pConnectorMapList" type="T_POINTER_TO_IoConfigConnectorMap" byteoffset="8" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeSimple name="T_RTS_IEC_HANDLE" size="4" swapsize="4" typeclass="Pointer" iecname="RTS_IEC_HANDLE" aliasedtype="T_POINTER_TO_BYTE" aliasediecname="POINTER TO BYTE" />
+    <TypeUserDef name="T_IoConfigConnector" size="24" nativesize="24" typeclass="Userdef" pouclass="STRUCTURE" iecname="IoConfigConnector">
+      <UserDefElement iecname="wType" type="T_WORD" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="wOptions" type="T_WORD" byteoffset="2" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="dwFlags" type="T_DWORD" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="hIoDrv" type="T_RTS_IEC_HANDLE" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="dwNumOfParameters" type="T_DWORD" byteoffset="12" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="pParameterList" type="T_POINTER_TO_IoConfigParameter" byteoffset="16" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="pFather" type="T_POINTER_TO_IoConfigConnector" byteoffset="20" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="Constants">
+        <Node name="CompilerVersion" type="T_VERSION" access="Read" />
+        <Node name="RuntimeVersion" type="T_VERSION" access="Read" />
+      </Node>
+      <Node name="IoConfig_Globals">
+        <Node name="CAN_1" type="T_CANbus" access="ReadWrite" />
+        <Node name="Machine" type="T_PLCSystemFB" access="ReadWrite" />
+        <Node name="nIoConfigTaskMapCount" type="T_DINT" access="ReadWrite" />
+        <Node name="pIoConfigTaskMap" type="T_POINTER_TO_IoConfigTaskMap" access="ReadWrite" />
+        <Node name="RelocTable" type="T_RelocationTableFB" access="ReadWrite" />
+      </Node>
+      <Node name="IoConfig_Globals_Mapping">
+        <Node name="ibDI_IB1" type="T_BYTE" access="Read" directaddress="%IB2" />
+        <Node name="iwDI_IW0" type="T_WORD" access="Read" directaddress="%IW0" />
+        <Node name="qbDQ_QB1" type="T_BYTE" access="ReadWrite" directaddress="%QB2" />
+        <Node name="qwDQ_QW0" type="T_WORD" access="ReadWrite" directaddress="%QW0" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>
